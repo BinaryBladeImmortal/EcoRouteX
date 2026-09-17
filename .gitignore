@@ -1,0 +1,32 @@
+.venv/
+venv/
+.env
+.env.*
+*.secret
+secrets.*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.log
+
+# Flutter / Dart
+UI/.dart_tool/
+UI/build/
+UI/.idea/
+UI/local.properties
+UI/**/ephemeral/
+UI/.packages
+UI/.flutter-plugins
+UI/.flutter-plugins-dependencies
+UI/.metadata
+UI/pubspec.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

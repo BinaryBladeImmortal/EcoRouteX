@@ -1,0 +1,27 @@
+name: ecoroutex
+description: EcoRouteX – AI Powered Smart Mobility Advisor
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  fl_chart: ^0.68.0
+  percent_indicator: ^4.2.3
+  google_fonts: ^6.1.0
+  flutter_animate: ^4.5.0
+  http: ^1.6.0
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
