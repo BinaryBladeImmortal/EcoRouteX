@@ -13,7 +13,9 @@ __pycache__/
 
 # Flutter / Dart
 UI/.dart_tool/
-UI/build/
+UI/build/*
+!UI/build/web/
+!UI/build/web/**
 UI/.idea/
 UI/local.properties
 UI/**/ephemeral/
