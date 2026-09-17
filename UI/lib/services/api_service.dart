@@ -5,9 +5,17 @@ import 'dart:convert';
 class ApiService {
   // Use localhost for desktop/web, Android emulator host for Android devices.
   static String get baseUrl {
+    // Flutter Web deployed with Flask on the same Render service.
+    if (kIsWeb) {
+      return '';
+    }
+
+    // Android emulator → host machine.
     if (defaultTargetPlatform == TargetPlatform.android) {
       return 'http://10.0.2.2:5000';
     }
+
+    // Windows/Desktop local development.
     return 'http://127.0.0.1:5000';
   }
 
