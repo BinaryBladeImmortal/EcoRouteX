@@ -332,6 +332,27 @@ Examples:
 
 ---
 
+## Machine Learning & Model Development
+
+EcoRouteX includes machine learning models developed and trained specifically for the application.
+
+The project uses **Random Forest-based models** for transportation recommendation and CO₂ emission prediction. The models use trip-related factors such as **distance, estimated travel duration, transportation mode, weather conditions, time of day, and user preferences** to support route and transportation decisions.
+
+The ML components are integrated with the application's backend to provide transportation recommendations, CO₂ emission estimates, eco scores, and supporting travel insights. Cost and travel duration are also incorporated into the application's trip-planning and recommendation logic.
+
+All machine learning models, training/inference logic, and application-specific ML implementation included in this repository were **developed by the project author**.
+
+### Third-Party Services
+
+EcoRouteX uses the following external services:
+
+* OpenStreetMap — map data
+* OSRM — routing and route geometry
+* Photon — geocoding and location search
+
+These services are third-party resources and remain subject to their respective licenses and terms of use.
+
+
 ## API Endpoints
 
 ### Home
