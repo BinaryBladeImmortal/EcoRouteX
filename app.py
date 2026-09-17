@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
+import os
 import pandas as pd
 import joblib
 from datetime import datetime
@@ -16,6 +17,21 @@ route_optimizer_model = joblib.load("ml_models/route_optimizer_model.pkl")
 from analytics.analytics_engine import *
 
 app = Flask(__name__)
+
+FLUTTER_WEB_DIR = os.path.join(os.path.dirname(__file__), "UI", "build", "web")
+
+@app.route("/")
+def serve_flutter():
+    return send_from_directory(FLUTTER_WEB_DIR, "index.html")
+
+@app.route("/<path:path>")
+def serve_flutter_files(path):
+    file_path = os.path.join(FLUTTER_WEB_DIR, path)
+
+    if os.path.isfile(file_path):
+        return send_from_directory(FLUTTER_WEB_DIR, path)
+
+    return send_from_directory(FLUTTER_WEB_DIR, "index.html")
 
 @app.after_request
 def add_cors_headers(response):
